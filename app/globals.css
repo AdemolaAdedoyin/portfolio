@@ -62,15 +62,44 @@ h1 { font-size: clamp(3.5rem, 9vw, 7.5rem); line-height: .94; letter-spacing: -0
 
 @media (max-width: 820px) {
   .heroGrid, .sectionHeading, .experienceItem { grid-template-columns: 1fr; }
-  .heroGrid { padding-top: 48px; }
+  .heroGrid { padding-top: 48px; gap: 40px; }
   .projectGrid { grid-template-columns: 1fr; }
+  .projectCard { min-height: 0; gap: 32px; }
+  .experienceItem { gap: 24px; }
   .skillCloud { margin-left: 0; }
   .navLinks { gap: 14px; font-size: .85rem; }
 }
 
 @media (max-width: 520px) {
-  .shell { width: min(100% - 28px, 1120px); }
-  .navLinks a:nth-child(2) { display: none; }
-  .section { padding: 72px 0; }
-  .footer { flex-direction: column; }
+  .shell { width: min(calc(100% - 28px), 1120px); }
+  .hero { min-height: auto; padding-bottom: 52px; }
+  .nav { padding: 22px 0; }
+  .navLinks { gap: 11px; font-size: .76rem; }
+  .heroGrid { padding-top: 34px; gap: 34px; }
+  .eyebrow { margin-bottom: 12px; font-size: .67rem; letter-spacing: .13em; }
+  h1 { font-size: clamp(3.15rem, 16vw, 4.25rem); margin-bottom: 22px; }
+  .hero h2 { font-size: clamp(1.65rem, 8vw, 2.2rem); margin-bottom: 18px; }
+  .lead { font-size: 1rem; line-height: 1.55; }
+  .actions { margin-top: 24px; gap: 10px; }
+  .button { padding: 10px 15px; font-size: .88rem; }
+  .impactCard { padding: 20px; border-radius: 20px; }
+  .metric { padding: 14px 0; }
+  .metric strong { font-size: 1.75rem; }
+  .metric span { font-size: .86rem; }
+  .section { padding: 58px 0; }
+  .sectionHeading { gap: 10px; margin-bottom: 28px; }
+  .sectionHeading h2, .contact h2 { font-size: clamp(1.9rem, 10vw, 2.55rem); }
+  .projectGrid { gap: 14px; }
+  .projectCard { padding: 22px; border-radius: 18px; gap: 24px; }
+  .projectCard h3 { font-size: 1.2rem; margin-bottom: 10px; }
+  .projectCard p { margin: 0; font-size: .95rem; }
+  .projectCard a { margin-top: 16px; }
+  .tags { gap: 6px; }
+  .tags span, .skillCloud span { padding: 6px 9px; font-size: .77rem; }
+  .experienceItem { gap: 18px; padding: 26px 0; }
+  .experienceItem ul { padding-left: 18px; font-size: .95rem; }
+  .experienceItem li + li { margin-top: 8px; }
+  .skillCloud { gap: 8px; }
+  .contact p:not(.eyebrow) { font-size: 1rem; }
+  .footer { flex-direction: column; gap: 8px; padding: 24px 0 32px; }
 }
