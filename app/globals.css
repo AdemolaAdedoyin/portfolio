@@ -103,3 +103,15 @@ h1 { font-size: clamp(3.5rem, 9vw, 7.5rem); line-height: .94; letter-spacing: -0
   .contact p:not(.eyebrow) { font-size: 1rem; }
   .footer { flex-direction: column; gap: 8px; padding: 24px 0 32px; }
 }
+
+/* Project links stay distinct when cards wrap on narrow screens. */
+.projectLinks { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+.projectLinks a { text-decoration: underline; text-underline-offset: 5px; }
+.projectNote { max-width: 780px; color: var(--muted); margin-top: 28px; }
+a:focus-visible { outline: 2px solid var(--text); outline-offset: 5px; }
+.tags span, .skillCloud span, .navLinks { font-size: .875rem; }
+.eyebrow { font-size: .8125rem; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button { transition: none; }
+}

@@ -1,24 +1,54 @@
 const projects = [
   {
     name: "ExpenseFlow",
-    description:
-      "A personal finance and expense-management platform. Maintained as a separate active project and featured here as part of my current engineering work.",
+    description: "Multi-tenant expense management with policy-driven approvals, capability-based access, PostgreSQL row-level security, OIDC sign-in, and private receipt storage.",
+    detail: "Idempotency keys and optimistic locking protect approval decisions; background jobs handle notifications.",
     href: "https://github.com/AdemolaAdedoyin/expenseflow",
-    tags: ["TypeScript", "Backend", "Fintech"],
+    tags: ["NestJS", "React", "PostgreSQL", "BullMQ", "S3 / SES"],
   },
   {
-    name: "Fintech API",
-    description:
-      "An earlier fintech backend project that I am evolving into a stronger transaction-platform case study focused on reliable APIs and financial workflows.",
+    name: "Fintech Transaction Platform",
+    description: "Wallets, transfers, and reversals backed by an immutable double-entry ledger with integer money amounts and database-enforced balancing.",
+    detail: "Concurrent transfer protection, a transactional outbox, signed webhooks, and an opt-in Paystack hosted-checkout adapter. The current home for my financial-systems work.",
     href: "https://github.com/AdemolaAdedoyin/fintech",
-    tags: ["Node.js", "APIs", "Fintech"],
+    tags: ["NestJS", "TypeScript", "PostgreSQL", "Prisma", "Redis"],
   },
   {
-    name: "Customer Support Messaging",
-    description:
-      "A messaging application concept designed around handling customer inquiries at scale and surfacing urgent issues.",
+    name: "Webhook Relay",
+    description: "Signed event delivery with durable fan-out, automatic retries, crash recovery, and a React operations dashboard.",
+    detail: "Per-subscription throughput controls, scoped API keys, encrypted signing secrets, bounded replay, and retained delivery history.",
+    href: "https://github.com/AdemolaAdedoyin/webhook-relay",
+    tags: ["Express", "React", "PostgreSQL", "Redis", "BullMQ"],
+  },
+  {
+    name: "Taskflow",
+    description: "An API for one-off and recurring jobs, using PostgreSQL as the source of truth and Redis as a rebuildable execution layer.",
+    detail: "Execution leases, stale-worker recovery, distributed handler limits, signed callbacks, and OpenAPI documentation.",
+    href: "https://github.com/AdemolaAdedoyin/taskflow",
+    tags: ["TypeScript", "Express", "PostgreSQL", "BullMQ", "OpenAPI"],
+  },
+  {
+    name: "LLM Gateway",
+    description: "A unified chat-completions API with logical model routing, provider fallback, response caching, and per-key rate limits.",
+    detail: "Usage tracking makes provider calls observable. Cost estimates use illustrative pricing; this project is not a billing service.",
+    href: "https://github.com/AdemolaAdedoyin/llm-gateway",
+    tags: ["TypeScript", "Express", "PostgreSQL", "Redis"],
+  },
+  {
+    name: "SupportDesk",
+    description: "A customer-support inbox and portal with priority workflows, case assignment, and a Firebase-backed realtime workspace.",
+    detail: "A zero-setup browser demo lets visitors explore the product without configuring Firebase.",
     href: "https://github.com/AdemolaAdedoyin/CS-Messaging-Web-App",
-    tags: ["Vue", "Messaging", "Scalability"],
+    demo: "https://cs-messaging-web-app-tan.vercel.app/",
+    tags: ["Vue 3", "TypeScript", "Firebase", "Playwright"],
+  },
+  {
+    name: "20 Questions",
+    description: "A local two-player guessing game with privacy handoffs, round history, persistent game state, and responsive controls.",
+    detail: "A self-contained frontend with unit and browser tests. Players share one device; online multiplayer is a future milestone.",
+    href: "https://github.com/AdemolaAdedoyin/20questions",
+    demo: "https://20questions-ten.vercel.app/",
+    tags: ["Vue 3", "TypeScript", "Vitest", "Playwright"],
   },
 ];
 
@@ -71,6 +101,9 @@ const skills = [
   "RabbitMQ",
   "BullMQ",
   "Redis",
+  "PostgreSQL",
+  "Prisma",
+  "GitHub Actions",
   "MySQL",
   "MongoDB",
 ];
@@ -79,7 +112,7 @@ export default function Home() {
   return (
     <main>
       <section className="hero shell">
-        <nav className="nav">
+        <nav className="nav" aria-label="Main navigation">
           <a className="brand" href="#top">AA</a>
           <div className="navLinks">
             <a href="#work">Work</a>
@@ -123,16 +156,21 @@ export default function Home() {
               <div>
                 <h3>{project.name}</h3>
                 <p>{project.description}</p>
+                <p>{project.detail}</p>
               </div>
               <div>
                 <div className="tags">
                   {project.tags.map((tag) => <span key={tag}>{tag}</span>)}
                 </div>
-                <a href={project.href} target="_blank" rel="noreferrer">View repository →</a>
+                <div className="projectLinks">
+                  <a href={project.href} target="_blank" rel="noreferrer" aria-label={`View ${project.name} repository`}>Repository</a>
+                  {project.demo && <a href={project.demo} target="_blank" rel="noreferrer" aria-label={`Open ${project.name} demo`}>Live demo</a>}
+                </div>
               </div>
             </article>
           ))}
         </div>
+        <p className="projectNote">Backend repositories include local setup and operational documentation. Public deployment and external-provider acceptance are separate milestones.</p>
       </section>
 
       <section className="section shell" id="experience">
@@ -176,6 +214,7 @@ export default function Home() {
         <div className="actions">
           <a className="button primary" href="mailto:adedoyinademola397@gmail.com">Email me</a>
           <a className="button" href="https://github.com/AdemolaAdedoyin" target="_blank" rel="noreferrer">GitHub profile</a>
+          <a className="button" href="https://www.linkedin.com/in/sina-ademola-38635a162/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </section>
 
