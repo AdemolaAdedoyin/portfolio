@@ -54,34 +54,35 @@ const projects = [
 
 const experience = [
   {
-    role: "Software Engineering Manager",
-    company: "Slum Tech",
-    period: "2024 — Present",
+    role: "Full Stack Engineer",
+    company: "Flutterwave",
+    period: "Jan 2024 — Present",
     highlights: [
-      "Designing scalable microservices with Python, Node.js, and Docker.",
-      "Improved backend response time by 30% and SQL data retrieval performance by 15%.",
-      "Used AWS Auto Scaling to handle traffic spikes while reducing downtime.",
-      "Partnered with DevOps on infrastructure automation that reduced server costs by 15%.",
+      "Built rule-based microservices supporting 10K+ merchants, improving fee accuracy and transaction processing.",
+      "Developed services that increased internal revenue by 20% in the first year.",
+      "Reduced transaction processing time by 40% and improved queueing performance by 40%.",
+      "Migrated a legacy application to React, reducing maintenance costs and improving user experience alongside backend API and notification-service delivery.",
+      "Integrated cryptocurrency settlement with FalconX using TypeScript and mentored junior developers and interns.",
     ],
   },
   {
-    role: "Full Stack Engineer",
-    company: "Flutterwave",
-    period: "2019 — 2023",
+    role: "Software Engineer",
+    company: "Slum Tech",
+    period: "Dec 2019 — Dec 2023",
     highlights: [
-      "Built rule-based microservices supporting 10K+ merchants.",
-      "Developed revenue-impacting services that increased internal revenue by 20% in the first year.",
-      "Reduced transaction processing time and improved queueing performance by 40%.",
-      "Delivered scalable APIs, notification services, and frontend modernization work.",
+      "Designed microservices with Python, Node.js, and Docker, and built REST APIs with Express for third-party integrations.",
+      "Integrated secure payment gateways to reduce fraud and improve transaction success.",
+      "Improved backend response time by 30% and SQL data retrieval performance by 15% within six months.",
+      "Used AWS Auto Scaling to handle traffic spikes and partnered with DevOps on infrastructure automation that reduced server costs by 15%.",
     ],
   },
   {
     role: "Software Engineer",
     company: "BD Electronics",
-    period: "2018 — 2019",
+    period: "Feb 2018 — Dec 2019",
     highlights: [
       "Delivered API integrations that reduced data-processing time by 40%.",
-      "Built scalable web applications and contributed to faster release cycles through Agile practices.",
+      "Built web applications that increased user engagement by 30% and contributed to faster releases through Agile practices and peer code reviews.",
     ],
   },
 ];
@@ -127,7 +128,7 @@ export default function Home() {
             <h1>Ademola Adedoyin</h1>
             <h2>I build reliable APIs, financial systems, and cloud-native software.</h2>
             <p className="lead">
-              Backend-focused Software Engineer and Engineering Manager with experience across fintech,
+              Full Stack Engineer with a backend focus and experience across fintech,
               distributed systems, microservices, event-driven architecture, and AWS.
             </p>
             <div className="actions">
