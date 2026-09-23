@@ -1,5 +1,7 @@
 # Ademola Adedoyin — Engineering Portfolio
 
+**Live portfolio:** https://portfolio-umber-phi-11.vercel.app/
+
 A Next.js portfolio covering backend systems, financial infrastructure, durable
 job processing, and full-stack applications. The site includes project summaries,
 repository and demo links, professional experience, core technologies, and contact
@@ -20,6 +22,12 @@ links.
 Fintech is the maintained home for financial-systems work. RiseBeta is superseded
 and is not featured as an active project. Fintech incorporates selected legacy
 concepts; this does not imply every RiseBeta feature or commit was merged.
+
+## Demo availability
+
+- **Live demos:** [SupportDesk](https://cs-messaging-web-app-tan.vercel.app/) and [20 Questions](https://20questions-ten.vercel.app/).
+- **Run locally:** ExpenseFlow, Fintech, Webhook Relay, and Taskflow. Follow each repository's setup guide.
+- **ExpenseFlow hosting:** Only its frontend has been hosted; its backend is not deployed. It is not currently offered as a working public full-stack demo.
 
 ## Stack
 
